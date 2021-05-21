@@ -1,0 +1,10 @@
+---
+- name: Tune kernel parameters
+  sysctl:
+    name: "{{ item.name }}"
+    value: "{{ item.value }}"
+  notify: reload_sysctl
+  with_items: "{{ minio_tune_kernel_values }}"
+- name: Selectively disable transparent huge pages
+  shell: "echo madvise | tee /sys/kernel/mm/transparent_hugepage/enabled"
+...
