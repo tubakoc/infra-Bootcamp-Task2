@@ -32,21 +32,21 @@
         size: "{{ item.size }}" 
       with_items:
         - name: lv_data1
-          size: 640
+          size: 540
         - name: lv_data2
-          size: 640
+          size: 540
         - name: lv_data3
-          size: 640
+          size: 540
         - name: lv_data4
-          size: 640
+          size: 540
         - name: lv_data5
-          size: 640
+          size: 540
         - name: lv_data6
-          size: 640
+          size: 540
         - name: lv_data7
-          size: 640
+          size: 540
         - name: lv_data8
-          size: 640
+          size: 540
 
     - name: Create xfs file systems
       filesystem:
